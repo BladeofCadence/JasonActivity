@@ -34,15 +34,15 @@ private static boolean BUILT = false;
                         // NEXT, we need to use GSON to turn that JSON into a model
                         try {
                             JSONObject object = response.getJSONObject("record");
-                            JSONArray jsonArray = object.getJSONArray("gameCompanies");
+                            JSONArray jsonArray = object.getJSONArray("pokemonGames");
                             MODELS.clear();
                             MODELS_MAP.clear();
                             for (int i = 0; i < jsonArray.length(); i++) {
-                                JSONObject gameCompany = jsonArray.getJSONObject(i);
-                                String name = gameCompany.getString("name");
-                                Integer year = gameCompany.getInt("year");
-                                String recentConsole = gameCompany.getString("recentConsole");
-                                Model model = new Model(name, year, recentConsole);
+                                JSONObject pokemans = jsonArray.getJSONObject(i);
+                                String name = pokemans.getString("name");
+                                String favoritePokemon = pokemans.getString("favoritePokemon");
+                                String description = pokemans.getString("description");
+                                Model model = new Model(name, favoritePokemon, description);
                                 MODELS.add(model);
                                 MODELS_MAP.put(name, model);
                             }

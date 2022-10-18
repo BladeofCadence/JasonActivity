@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">JasonActivity</string>
     <string name="title_item_detail">Item Detail</string>
-    <string name="JSON_url">https://api.jsonbin.io/v3/b/5f726a107243cd7e8245d58b</string>
+    <string name="JSON_url">https://api.jsonbin.io/v3/b/634e1a2d0e6a79321e2c1d42</string>
 </resources>

@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.example.jasonactivity.placeholder.PlaceholderContent;
 import com.example.jasonactivity.databinding.FragmentItemDetailBinding;
 
 /**
@@ -89,7 +88,7 @@ public class ItemDetailFragment extends Fragment {
 
     private void updateContent() {
         if (modelItem != null) {
-            mTextView.setText(modelItem.getRecentConsole());
+            mTextView.setText(modelItem.getDescription());
             if (mToolbarLayout != null) {
                 mToolbarLayout.setTitle(modelItem.getName());
             }

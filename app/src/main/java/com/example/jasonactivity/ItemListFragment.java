@@ -126,7 +126,7 @@ public class ItemListFragment extends Fragment {
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
             holder.mIdView.setText(mValues.get(position).getName());
-            holder.mContentView.setText(mValues.get(position).getYear().toString());
+            holder.mContentView.setText(mValues.get(position).getFavoritePokemon().toString());
             holder.modelItem = mValues.get(position);
 
             holder.itemView.setTag(mValues.get(position));
